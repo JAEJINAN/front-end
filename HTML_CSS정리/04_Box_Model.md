@@ -236,6 +236,8 @@ box-shadow: 50px 50px 50px -10px red;
 
 
 
+
+
 ### box-sizing
 
 박스는 가로, 세로 길이 구성이 border size + padding size + content size 인데
@@ -268,6 +270,81 @@ box크기가 border-box의 크기로 고정됨 (알아서 위의 width, height�
 * {
     box-sizing: border-box;
 }
+```
+
+
+
+### 배경 이미지
+
+background-color로 배경 색을 변경하는 방법을 알아봤다. 이젠 배경으로 이미지를 사용하는 방법을 알아보자.
+
+```css
+background-image: url("경로")
+background-repeat: no-repeat;
+```
+
+- background-repeat 
+  - 이미지를 반복시킬건지 아닌지를 설정하는 방법
+
+```css
+/* 반복하지 않음 */
+background-repeat: no-repeat;
+
+/* 가로 방향으로만 반복 */
+background-repeat: repeat-x;
+
+/* 세로 방향으로만 반복 */
+background-repeat: repeat-y;
+
+/* 가로와 세로 모두 반복 */
+background-repeat: repeat;
+
+/* 반복할 수 있는 만큼 반복한 뒤, 남는 공간은 이미지 간의 여백으로 배분 */
+background-repeat: space;
+
+/* 반복할 수 있는 만큼 반복한 뒤, 남는 공간은 이미지 확대를 통해 배분 */
+background-repeat: round;
+```
+
+- background-size
+
+```css
+/* 원래 이미지 사이즈대로 출력 */
+background-size: auto;
+
+/* 화면을 꽉 채우면서, 사진 비율을 유지 */
+background-size: cover;
+
+/* 가로, 세로 중 먼저 채워지는 쪽에 맞추어서 출력 */
+background-size: contain;
+
+/* 픽셀값 지정 (가로: 30px, 세로: 50px로 설정) */
+background-size: 30px 50px;
+
+/* 퍼센트값 지정 (가로: 부모 요소 width의 60%, 세로: 부모 요소 height의 70%로 설정) */
+background-size: 60% 70%;
+```
+
+- background-position
+
+```css
+/* 단어로 지정해주기 (가로: left, center, right, 세로: top, center, bottom) */
+/* 아래와 같은 총 9개의 조합이 가능 */
+background-position: left top;
+background-position: left center;
+background-position: left bottom;
+background-position: right top;
+background-position: right center;
+background-position: right bottom;
+background-position: center top;
+background-position: center center;
+background-position: center bottom;
+
+/* 퍼센트로 지정해주기 (가로: 전체 width의 25% 지점, 세로: 전체 height의 75% 지점 ) */
+background-position: 25% 75%;
+
+/* 픽셀로 지정하기 (가로: 가장 왼쪽 가장자리에서부터 오른쪽으로 100px 이동한 지점, 세로: 가장 상단 가장자리에서 아래로 200px 이동한 지점) */
+background-position: 100px 200px;
 ```
 
 
